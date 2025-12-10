@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 52,
+  nextobjectid = 54,
   properties = {
     ["music"] = "christmas_outside"
   },
@@ -33,7 +33,7 @@ return {
       opacity = 1,
       offsetx = 0,
       offsety = -80,
-      parallaxx = 1,
+      parallaxx = 0.8,
       parallaxy = 1,
       repeatx = false,
       repeaty = false,
@@ -784,9 +784,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 640,
-          y = 360,
+          y = 380,
           width = 40,
-          height = 40,
+          height = 20,
           rotation = 0,
           visible = true,
           properties = {
@@ -829,6 +829,20 @@ return {
             ["map"] = "christmas/outside/outside_3",
             ["marker"] = "out_2"
           }
+        },
+        {
+          id = 53,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 400,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          gid = 139,
+          visible = true,
+          properties = {}
         }
       }
     }

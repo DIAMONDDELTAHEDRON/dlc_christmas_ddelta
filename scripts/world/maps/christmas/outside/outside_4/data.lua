@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 26,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
-  nextobjectid = 55,
+  nextlayerid = 12,
+  nextobjectid = 79,
   properties = {
     ["music"] = "christmas_outside"
   },
@@ -33,7 +33,7 @@ return {
       opacity = 1,
       offsetx = 0,
       offsety = 0,
-      parallaxx = 1,
+      parallaxx = 0.8,
       parallaxy = 0.5,
       repeatx = false,
       repeaty = false,
@@ -473,6 +473,21 @@ return {
           height = 40,
           rotation = 0,
           visible = true,
+          properties = {
+            ["dontattach"] = true
+          }
+        },
+        {
+          id = 73,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 600,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
           properties = {}
         }
       }
@@ -549,9 +564,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 600,
-          y = 320,
+          y = 360,
           width = 120,
-          height = 360,
+          height = 320,
           rotation = 0,
           visible = true,
           properties = {}
@@ -818,7 +833,7 @@ return {
           x = 680,
           y = 160,
           width = 40,
-          height = 160,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {}
@@ -859,6 +874,45 @@ return {
           shape = "point",
           x = 460,
           y = 40,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 62,
+          name = "f1_marker",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 740,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 63,
+          name = "f2_marker",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 680,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 64,
+          name = "f3_marker",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 620,
           width = 0,
           height = 0,
           rotation = 0,
@@ -936,9 +990,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 280,
-          y = 760,
+          y = 780,
           width = 40,
-          height = 40,
+          height = 20,
           rotation = 0,
           visible = true,
           properties = {
@@ -995,7 +1049,91 @@ return {
             ["map"] = "christmas/outside/outside_5",
             ["marker"] = "out_4"
           }
+        },
+        {
+          id = 75,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 800,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          gid = 139,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 78,
+          name = "no_follow_area",
+          type = "",
+          shape = "polygon",
+          x = 240,
+          y = 760,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 240, y = 0 },
+            { x = 240, y = -80 },
+            { x = 560, y = -80 },
+            { x = 560, y = 240 },
+            { x = 0, y = 240 }
+          },
+          properties = {
+            ["facing"] = "right",
+            ["flag"] = "xo_2"
+          }
         }
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 22,
+      height = 26,
+      id = 11,
+      name = "tree_top",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 514, 515, 516, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
     }
   }

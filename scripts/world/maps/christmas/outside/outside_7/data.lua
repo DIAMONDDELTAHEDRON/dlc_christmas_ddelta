@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 31,
+  nextlayerid = 8,
+  nextobjectid = 35,
   properties = {
     ["music"] = "christmas_outside",
     ["name"] = "WORKSHOP - Workshop"
@@ -130,46 +130,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 1,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 640,
-          y = 320,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = -120, y = 0 },
-            { x = -240, y = 120 },
-            { x = -240, y = 160 },
-            { x = 0, y = 160 }
-          },
-          properties = {}
-        },
-        {
-          id = 2,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 0,
-          y = 320,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 160, y = 0 },
-            { x = 280, y = 120 },
-            { x = 280, y = 160 },
-            { x = 0, y = 160 }
-          },
-          properties = {}
-        },
-        {
           id = 3,
           name = "",
           type = "",
@@ -232,6 +192,44 @@ return {
           height = 200,
           rotation = 0,
           visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 0,
+          y = 360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 160, y = 0 },
+            { x = 280, y = 120 },
+            { x = 0, y = 120 }
+          },
+          properties = {}
+        },
+        {
+          id = 32,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 400,
+          y = 480,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 120, y = -120 },
+            { x = 240, y = -120 },
+            { x = 240, y = 0 }
+          },
           properties = {}
         }
       }
@@ -496,7 +494,67 @@ return {
           gid = 1405,
           visible = true,
           properties = {}
+        },
+        {
+          id = 33,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 360,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          gid = 1318,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 34,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 360,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          gid = 1318,
+          visible = true,
+          properties = {}
         }
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
+      id = 7,
+      name = "tree_top",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        21, 352, 351, 352, 23, 24, 25, 0, 0, 0, 19, 20, 21, 22, 351, 352,
+        0, 0, 0, 385, 56, 57, 58, 0, 0, 0, 52, 53, 54, 55, 0, 0,
+        0, 0, 0, 0, 89, 90, 91, 0, 0, 0, 85, 86, 87, 0, 0, 0,
+        0, 0, 0, 0, 0, 123, 124, 0, 0, 0, 118, 119, 0, 0, 0, 0
       }
     }
   }

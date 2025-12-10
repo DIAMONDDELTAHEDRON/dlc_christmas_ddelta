@@ -16,7 +16,10 @@ function XO:init(data)
 end
 
 function XO:onEnter(chara)
-    if chara == Game.world.player then
+    if chara.is_player then
+		if self.state < 2 then
+			Assets.playSound("instanoise")
+		end
         if self.state == 0 then
 			self.state = 1
 			self:setSprite("world/events/xo/o")

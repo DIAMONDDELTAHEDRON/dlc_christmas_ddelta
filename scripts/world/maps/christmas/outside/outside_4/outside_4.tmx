@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="22" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="55">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="22" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="79">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <property name="music" value="christmas_outside"/>
  </properties>
  <tileset firstgid="1" source="../../../../tilesets/snowdin.tsx"/>
- <imagelayer id="10" name="Image Layer 1" parallaxy="0.5">
+ <imagelayer id="10" name="Image Layer 1" parallaxx="0.8" parallaxy="0.5">
   <image source="../../../../../../assets/sprites/world/maps/snowy_bg.png" width="1306" height="480"/>
  </imagelayer>
  <layer id="4" name="Tile Layer 3" width="22" height="26">
@@ -206,14 +206,19 @@
     <property name="flag" value="xo_2"/>
    </properties>
   </object>
-  <object id="37" name="xobutton" x="280" y="920" width="40" height="40"/>
+  <object id="37" name="xobutton" x="280" y="920" width="40" height="40">
+   <properties>
+    <property name="dontattach" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="73" name="magicglass" x="240" y="600" width="40" height="160"/>
  </objectgroup>
  <objectgroup id="7" name="collision">
   <object id="1" x="0" y="0" width="400" height="120"/>
   <object id="2" x="120" y="120" width="280" height="40"/>
   <object id="3" x="520" y="0" width="360" height="160"/>
   <object id="4" x="800" y="160" width="80" height="880"/>
-  <object id="5" x="600" y="320" width="120" height="360"/>
+  <object id="5" x="600" y="360" width="120" height="320"/>
   <object id="6" x="720" y="400" width="80" height="280"/>
   <object id="7" x="0" y="600" width="280" height="160"/>
   <object id="8" x="0" y="760" width="240" height="280"/>
@@ -240,13 +245,22 @@
   <object id="49" x="480" y="800" width="120" height="40"/>
   <object id="50" x="520" y="880" width="80" height="40"/>
   <object id="51" x="400" y="760" width="40" height="120"/>
-  <object id="52" x="680" y="160" width="40" height="160"/>
+  <object id="52" x="680" y="160" width="40" height="200"/>
  </objectgroup>
  <objectgroup id="8" name="markers">
   <object id="16" name="out_3" x="40" y="260">
    <point/>
   </object>
   <object id="54" name="out_5" x="460" y="40">
+   <point/>
+  </object>
+  <object id="62" name="f1_marker" x="300" y="740">
+   <point/>
+  </object>
+  <object id="63" name="f2_marker" x="300" y="680">
+   <point/>
+  </object>
+  <object id="64" name="f3_marker" x="300" y="620">
    <point/>
   </object>
  </objectgroup>
@@ -272,7 +286,7 @@
    </properties>
    <point/>
   </object>
-  <object id="38" name="interactable" x="280" y="760" width="40" height="40">
+  <object id="38" name="interactable" x="280" y="780" width="40" height="20">
    <properties>
     <property name="solid" type="bool" value="true"/>
     <property name="text1" value="* If the puzzle is solved,[wait:5] good work![wait:10] But don't linger near!"/>
@@ -300,5 +314,43 @@
     <property name="marker" value="out_4"/>
    </properties>
   </object>
+  <object id="75" gid="139" x="280" y="800" width="40" height="40"/>
+  <object id="78" name="no_follow_area" x="240" y="760">
+   <properties>
+    <property name="facing" value="right"/>
+    <property name="flag" value="xo_2"/>
+   </properties>
+   <polygon points="0,0 240,0 240,-80 560,-80 560,240 0,240"/>
+  </object>
  </objectgroup>
+ <layer id="11" name="tree_top" width="22" height="26">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,514,515,516,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
 </map>

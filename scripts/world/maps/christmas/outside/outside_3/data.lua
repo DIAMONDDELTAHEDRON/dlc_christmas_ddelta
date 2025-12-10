@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 70,
+  nextobjectid = 74,
   properties = {
     ["music"] = "christmas_outside"
   },
@@ -33,7 +33,7 @@ return {
       opacity = 1,
       offsetx = 0,
       offsety = 0,
-      parallaxx = 1,
+      parallaxx = 0.8,
       parallaxy = 1,
       repeatx = false,
       repeaty = false,
@@ -485,7 +485,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 160,
-          y = 120,
+          y = 280,
           width = 40,
           height = 40,
           rotation = 0,
@@ -815,6 +815,45 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 70,
+          name = "f1_marker",
+          type = "",
+          shape = "point",
+          x = 100,
+          y = 130,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 71,
+          name = "f2_marker",
+          type = "",
+          shape = "point",
+          x = 160,
+          y = 140,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 72,
+          name = "f3_marker",
+          type = "",
+          shape = "point",
+          x = 220,
+          y = 130,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -862,6 +901,21 @@ return {
           properties = {
             ["map"] = "christmas/outside/outside_4",
             ["marker"] = "out_3"
+          }
+        },
+        {
+          id = 73,
+          name = "no_follow_area",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 80,
+          width = 400,
+          height = 280,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["flag"] = "xo_1"
           }
         }
       }
