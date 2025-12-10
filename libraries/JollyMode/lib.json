@@ -1,0 +1,96 @@
+{
+    "id": "jollymode",
+    "version": "1.0.0",
+    "engineVersion": "0.10.0-dev",
+
+    "authors": [
+        "HmmNoPls", // This library
+        "Scarm" // Made the GMPath library
+    ],
+
+    "config": {
+        // The alpha of the border around the screen
+        // Type: Number [0, 1]
+        // Setting this to 0 prevents the border from being added.
+        "border_alpha": 0,
+        // Whether to change spells to their jolly variant
+        // Type: Boolean
+        "jolly_spell": true,
+        "christmas_hat": {
+            // Whether to add Christmas hat to actors.
+            // WARNING: HIGHLY EXPERIMENTAL
+            // STUFFS KEEP BREAKING BUT I NEED TO DO SMTH ELSE
+            // AND I NEED TO PUSH THIS LIBRARY AS SOON AS POSSIBLE
+            // THE RALSEI ACTOR DOESN'T REGISTER FOR SOME REASON??????
+            // WHY???? NOTHING'S WRONG WITH IT!!!!!
+            // Type: Boolean
+            "activate": false,
+            // Whether to add Christmas hat to actors even if the .christmas_hat_sprite property
+            // of the actor has not been specified.
+            // Type: Boolean
+            "add_even_if_not_specified": true,
+            // Default scale of the hat.
+            // Type: Number
+            "scale": 0.2
+        },
+        "world": {
+            // Change the sprite of chests to a Christmas variant.
+            // Type: Boolean
+            "retexture_chest": true,
+            "light": {
+                // Whether to add floor light by default. Layer defaults to just below the player's layer.
+                // Can be overriden if specified in Tiled.
+                // Type: Boolean
+                "floor_default": true,
+                // Whether to add glare around bulbs by default.
+                // Can be overriden if specified in Tiled.
+                // Type: Boolean
+                "glare_default": false,
+                // Whether to use Smooth Gradient with Accurate Light Falloff™ by default.
+                // Can be overriden if specified in Tiled.
+                // Type: Boolean
+                "realistic_default": false
+            }
+        },
+        "battle": {
+            // Toggles the Christmas variant for battle.
+            // Type: Boolean
+            "activate": true,
+            // Determine the layer of the battle snowflake.
+            // Type: Integer [1, 4]
+            // 1 - Below battlers
+            // 2 - Above battlers, below UI
+            // 3 - Above UI, below arena
+            // 4 - Above everything
+            "snowflake_layer": 2
+        },
+        "ui": {
+            // Change the border of certain UI elements to candy canes and red stripes.
+            // Type: Boolean
+            "border": true,
+            "light": {
+                // Whether to add Christmas light decoration to UIBox.
+                // Type: Boolean
+                "activate": false,
+                // Multiplier for the flicker speed.
+                // Type: Number
+                // Setting this to 0 disables flickering and all lights will always on.
+                "flicker_speed": 1,
+                // The duration in seconds to halt after the light fully lights up once.
+                // Type: Number
+                "flicker_halt": 0.5,
+                // A hex color to use for the color of the light bulbs.
+                // If set to "colorful" instead, each bulbs' color is randomized.
+                // Type: Hex / "colorful"
+                "color": "colorful",
+                // Add a glare effect around each bulbs.
+                // Type: Boolean
+                "glare": true,
+                // Whether to use Smooth Gradient with Accurate Light Falloff™ over simple circles.
+                // Doesn't matter if the "glow" option is disabled.
+                // Type: Boolean
+                "realistic": false
+            }
+        }
+    }
+}
